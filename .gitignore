@@ -1,5 +1,8 @@
 audio/
 srt_files/
+sliced_audio/
+ready_for_slice/
+merged_csv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
