@@ -97,9 +97,9 @@ print('MP4 to WAV convert complete')
 print('---------------------------------------------------------------------')
 
 #Pre-process audio for folder in which wav files are stored
-# pre_process_audio(audio_path)
-# print('Pre-processing of audio files is complete.')
-# print('---------------------------------------------------------------------')
+pre_process_audio(audio_path)
+print('Pre-processing of audio files is complete.')
+print('---------------------------------------------------------------------')
 
 #now slice audio according to start- and end-times in csv
 print('Slicing audio according to start- and end_times of transcript_csvs...')

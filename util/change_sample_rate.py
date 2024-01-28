@@ -17,12 +17,13 @@ def pre_process_audio(audio_path):
 
     start_sub = time.time()
     n = 0
-    print('Downsampling wav files...')
+    # print('Downsampling wav files...')
+    print('Skipping downsampling of wav files...')
     for file in os.listdir(audio_path):
         if(file.endswith('.wav')):
             try:
                 nameSolo_1 = file.rsplit('.', 1)[0]
-                y, s = librosa.load(audio_path + file, sr=16000) # Downsample 44.1kHz to 8kHz
+                y, s = librosa.load(audio_path + file) # Downsample 44.1kHz to 8kHz
                 # librosa.output.write_wav(path_audio_processed + nameSolo_1 + '.wav', y, s)
                 soundfile.write(path_audio_processed + nameSolo_1 + '.wav', y, s)
                 n = n+1
@@ -30,7 +31,7 @@ def pre_process_audio(audio_path):
             except EOFError as error:
                 next
 
-    print('Downsampling complete')
+    print('complete')
     print('---------------------------------------------------------------------')
 
     s = 0
