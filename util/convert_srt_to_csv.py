@@ -16,7 +16,7 @@ def change_encoding(srt):
         f.write(text)
 
 def convert_srt_to_csv(file):
-    with open(file, 'r') as h:
+    with open(file, 'r', encoding='utf8') as h:
         sub = h.readlines()   #returns list of all lines
 
     re_pattern = r'[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3} --> [0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}'
