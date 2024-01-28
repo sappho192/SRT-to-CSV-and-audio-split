@@ -21,6 +21,8 @@ Therefore, this repo offers the possibility to easily split audio files based on
 
 * Create new conda environment with python version 3.6
   * `conda create -n "srt" python=3.6`
+* Activate the conda environment
+  * `conda activate srt`
 * Install required libraries manually or using `requirements.txt`
   * Manually: `pip install librosa soundfile pydub moviepy pandas unidecode num2words nltk`
   * Using pip list: `pip install -r requirements.txt`
