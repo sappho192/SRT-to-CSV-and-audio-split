@@ -1,14 +1,40 @@
 # Split audio according to information in srt-file.
 
-To be able to train the speech-recognition engine `<a href='https://github.com/mozilla/DeepSpeech'>` DeepSpeech`</a>`, audio-files should not be longer than 10s.
+To be able to train the speech-recognition engine `<a href='https://github.com/mozilla/DeepSpeech'>` DeepSpeech `</a>`, audio-files should not be longer than 10s.
 Therefore, this repo offers the possibility to easily split audio files based on the subtitle-info in srt-files and prepare corresponding transcript files.
 
 **Table of Contents**
 
-- [Prerequisites](#prerequisites)
-- [Walk-through](#walk-through)
-- [Check-Characters](#Check-Characters)
-- [About this project](#About-this-project)
+- [Split audio according to information in srt-file.](#split-audio-according-to-information-in-srt-file)
+  - [Quickstart](#quickstart)
+    - [Easy guide for requirements](#easy-guide-for-requirements)
+  - [Prerequisites](#prerequisites)
+  - [Walk-through](#walk-through)
+    - [Example Files](#example-files)
+    - [Modules](#modules)
+  - [Check characters](#check-characters)
+  - [About this project:](#about-this-project)
+
+## Quickstart
+
+### Easy guide for requirements
+
+* Create new conda environment with python version 3.6
+  * `conda create -n "srt" python=3.6`
+* Install required libraries manually or using `requirements.txt`
+  * Manually: `pip install librosa soundfile pydub moviepy pandas unidecode num2words nltk`
+  * Using pip list: `pip install -r requirements.txt`
+
+### Preparing the data
+
+* Create two directory: `audio`, `srt_files`
+* Copy audio/movie (`wav,wmv,mp4`) files to  `audio` directory
+* Copy caption (`srt`) files to `srt_files` directory
+
+### Run the code
+
+* Run `python SRT_to_CSV_and_audio_split.py`
+
 
 ## Prerequisites
 
@@ -30,9 +56,9 @@ Therefore, this repo offers the possibility to easily split audio files based on
 
 ## Walk-through
 
-`<b>`This section will explain what the modules and script do in order to provide a deeper understanding of the individual steps and facilitate modification`</b>`
+`<b>`This section will explain what the modules and script do in order to provide a deeper understanding of the individual steps and facilitate modification `</b>`
 
-FYI: the script "convert_srt_to_csv.py" is meant to be used on srt files with encoding "cp1252" (a.k.a Windows 1252). The reason for this is that in order to keep characters such as "ä", the files have to be encoded to "utf8". 
+FYI: the script "convert_srt_to_csv.py" is meant to be used on srt files with encoding "cp1252" (a.k.a Windows 1252). The reason for this is that in order to keep characters such as "ä", the files have to be encoded to "utf8".
 
 If your files are already in "utf8", then deactive the module "change_encoding".
 
