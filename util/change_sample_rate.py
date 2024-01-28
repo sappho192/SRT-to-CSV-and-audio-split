@@ -23,7 +23,8 @@ def pre_process_audio(audio_path):
             try:
                 nameSolo_1 = file.rsplit('.', 1)[0]
                 y, s = librosa.load(audio_path + file, sr=16000) # Downsample 44.1kHz to 8kHz
-                librosa.output.write_wav(path_audio_processed + nameSolo_1 + '.wav', y, s)
+                # librosa.output.write_wav(path_audio_processed + nameSolo_1 + '.wav', y, s)
+                soundfile.write(path_audio_processed + nameSolo_1 + '.wav', y, s)
                 n = n+1
                 print('File ', n , ' completed:', nameSolo_1)
             except EOFError as error:
