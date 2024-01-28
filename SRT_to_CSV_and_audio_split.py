@@ -71,11 +71,11 @@ if srt_counter == 0:
 create_directories()
 
 #Changing encoding from "cp1252" (a.k.a Windows 1252)to "utf-8-sig"
-print('Encoding srt_file(s) to utf8...')
-for srt in glob('./srt_files/*.srt'):
-    change_encoding(srt)
-print('Encoding of %s-file(s) changed' %srt_counter)
-print('---------------------------------------------------------------------')
+# print('Encoding srt_file(s) to utf8...')
+# for srt in glob('./srt_files/*.srt'):
+#     change_encoding(srt)
+# print('Encoding of %s-file(s) changed' %srt_counter)
+# print('---------------------------------------------------------------------')
 
 #Extracting information from srt-files to csv
 print('Extracting information from srt_file(s) to csv_files')
@@ -97,9 +97,9 @@ print('MP4 to WAV convert complete')
 print('---------------------------------------------------------------------')
 
 #Pre-process audio for folder in which wav files are stored
-pre_process_audio(audio_path)
-print('Pre-processing of audio files is complete.')
-print('---------------------------------------------------------------------')
+# pre_process_audio(audio_path)
+# print('Pre-processing of audio files is complete.')
+# print('---------------------------------------------------------------------')
 
 #now slice audio according to start- and end-times in csv
 print('Slicing audio according to start- and end_times of transcript_csvs...')
